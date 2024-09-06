@@ -1,0 +1,17 @@
+<div class="alert-container">
+    <div class="alert-header">
+      <div class="alert-icon">
+        <img src="assets/alertIcon.png" alt="Alert Icon"> <!-- You can use an icon here -->
+      </div>
+      <div class="alert-title">ALERTS</div>
+    </div>
+  
+    <ul class="alert-list">
+      <li class="alert-item" *ngFor="let alert of alerts">
+        <div class="alert-message">{{ alert.message }}</div>
+        <span class="alert-tag" [ngStyle]="{'background-color': alert.tagColor}">{{ alert.tag }}</span>
+        <div class="alert-ip">IP: {{ alert.ip }}</div>
+      </li>
+    </ul>
+  </div>
+  
